@@ -1,0 +1,155 @@
+body {
+    color: lightgrey;
+    background-color: #000000   ;
+    font-family: "bembo";
+    }
+
+.button{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.5s;
+    color:rgb(209, 209, 209);
+    background-color: transparent;
+    border: 1px solid transparent;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: rgb(167, 165, 170);
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 200px;
+    height: 25px;
+    color:rgb(209, 209, 209);
+    background-color: transparent;
+    border: 1px solid rgb(196,145,253);
+    display: inline-block;
+}
+
+select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 200px;
+    height: 25px;
+    color: lightgrey;
+    background-color: transparent;
+    border: 1px solid rgb(196,145,253);
+    display: inline-block;
+}
+
+option {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 200px;
+    height: 25px;
+    color:black;
+    background-color: transparent;
+    border: 1px solid rgb(196,145,253);
+    display: inline-block;
+}
+
+.ribbon-menu {
+    position: relative;
+    width:100%;
+    margin-bottom: 20px;
+    background-color: #52057b;
+}
+
+.ribbon-section {
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.descript {
+    font-size: 12px;
+    color: rgb(171, 171, 171);
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.separator {
+    height: 65px;
+    border-right: 1px solid grey;
+    display: inline-block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #000000 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* set arrow positioning */
+.arrow {
+	width: 60px;
+	height: 82px;
+	position: absolute;
+    left: 80%;
+    top: 90%;
+	margin-left: 0px;
+	bottom: 5%;
+    z-index:999;
+}
+
+/* set arrow styles */
+.arrow path {
+	stroke: red;
+	stroke-width: 2px;
+	fill: transparent;	
+	animation: down 2s infinite;
+}
+/* arrow keyframe animation */
+@keyframes down{
+0% { opacity:0 }
+25% { opacity:1 }
+75% { opacity:0 }
+100% { opacity:0 }
+}
+
+/* arrow animation delay */
+.arrow path.a1{	animation-delay:.0s; }
+.arrow path.a2{	animation-delay:.5s; }
+.arrow path.a3{	animation-delay:1s; }
+
+
