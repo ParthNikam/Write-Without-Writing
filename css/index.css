@@ -1,25 +1,19 @@
 body {
-  --background-primary: #fff;
-  --font-color-primary: #333;
+  --font-color-primary: #fff;
   --elevation-background: #f3f3f3;
   --link-color: #006eb8;
-  --font-family-primary: 'Helvetica';
   --handwriting-font: 'Homemade Apple';
-  --primary-color: #1a73e8;
   --ink-color: #000f55;
-  --label-color: #333;
-  --field-borders: #e0e0e0;
   --primary-button-bg: #1d1d1d;
   --primary-button-color: #eee;
   --font-color-delete: #dc3545;
   --delete-button-borders: #dc3545;
 }
 
-@font-face {
-  font-family: 'Hindi_Font';
-  src: url('./FONTS/Hindi_Type.ttf');
+body {
+background-color: rgb(38,38,38);
+color: white;
 }
-
 /* Default CSS Changes */
 * {
   box-sizing: border-box;
@@ -29,33 +23,10 @@ a {
   text-decoration: none;
   color: var(--link-color);
 }
-section {
-  padding: 20px 0px;
-}
-/* button {
-  border: none;
-  background-color: var(--elevation-background);
-  color: var(--font-color-primary);
-  cursor: pointer;
-  padding: 10px 20px;
-} */
 
 h1 {
   font-size: 3rem;
-}
-
-/* label {
-  color: var(--label-color);
-  font-size: 0.75rem;
-}
-
-label.block {
-  display: block;
-  padding-bottom: 5px;
-} */
-
-
-
+}  
 
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
@@ -65,7 +36,7 @@ input[type='number']::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield !important;
   -webkit-appearance: none;
-  width: 100%;
+  width: 100px;
 }
 
 /* global classes */
@@ -174,6 +145,7 @@ ul.info-ul > li {
 }
 
 .margined .top-margin {
+  padding-top: 5px;
   height: 50px;
   border-bottom: 2px solid rgba(255, 0, 0, .4);
   width: 100%;
@@ -206,6 +178,203 @@ ul.info-ul > li {
   display: block;
   /* background-image: linear-gradient(10deg, #000a, #0001); */
 }
+
+.button{
+  font-size: 15px;
+  /* margin-top: 10px; */
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  font-family: "bembo";
+  padding: 0px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.2s;
+  color:rgb(209, 209, 209);
+  background-color: transparent;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: rgb(137, 134, 131);
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 3px;
+  width: 200px;
+  height: 24px;
+  color:rgb(209, 209, 209);
+  background-color: transparent;
+  border: 1px solid rgb(196,145,253);
+  display: inline-block;
+}
+
+select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+  width: 200px;
+  height: 24px;
+  color: lightgrey;
+  background-color: transparent;
+  border: 1px solid rgb(196,145,253);
+  display: inline-block;
+}
+
+option {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+  width: 200px;
+  height: 24px;
+  color:black;
+  background-color: transparent;
+  border: 1px solid rgb(196,145,253);
+  display: inline-block;
+}
+
+ol {
+  margin: 0 0 1.5em;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol > li {
+  margin: 0;
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+
+ul {
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+ul > li {
+  margin: 0;
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: disc;
+}
+
+ul > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+}
+
+
+.ribbon-menu {
+  width:100%;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  background-color: #52057b;
+}
+
+.ribbon-section {
+  display:inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.descript {
+  font-size: 12px;
+  color: rgb(171, 171, 171);
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.separator {
+  position: relative;
+  top: 8px;
+  height: 70px;
+  border-right: 1px solid grey;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #000000 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* set arrow positioning */
+.arrow {
+width: 60px;
+height: 82px;
+position: absolute;
+  left: 80%;
+  top: 90%;
+margin-left: 0px;
+bottom: 5%;
+  z-index:999;
+}
+
+/* set arrow styles */
+.arrow path {
+stroke: red;
+stroke-width: 2px;
+fill: transparent;	
+animation: down 2s infinite;
+}
+/* arrow keyframe animation */
+@keyframes down{
+0% { opacity:0 }
+25% { opacity:1 }
+75% { opacity:0 }
+100% { opacity:0 }
+}
+
+/* arrow animation delay */
+.arrow path.a1{	animation-delay:.0s; }
+.arrow path.a2{	animation-delay:.5s; }
+.arrow path.a3{	animation-delay:1s; }
 
 /* OUTPUT */
 .output {
@@ -313,8 +482,6 @@ legend {
   bottom: 12px;
   font-size: 12px;
 }
-
-
 
 .experimental {
   opacity: 0.8;
