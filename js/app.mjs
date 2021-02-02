@@ -1,8 +1,4 @@
-import {
-  addFontFromFile,
-  formatText,
-  addPaperFromFile
-} from './utils/helpers.mjs';
+import {formatText} from './utils/helpers.mjs';
 import {
   generateImages,
   downloadAsPDF,
@@ -18,7 +14,7 @@ let inkColor = '#000f55';
 
 function setInkColor(color) {
   inkColor = color;
-}
+}   
 
 /**
  * Add event listeners here, they will be automatically mapped with addEventListener later
@@ -31,10 +27,8 @@ const EVENT_MAP = {
       generateImages();
     }
   },
-  '#font-size': {
-    on: 'change',
-    action: (e) => setTextareaStyle('fontSize', e.target.value + 'pt')
-  },
+ 
+  
   '#letter-spacing': {
     on: 'change',
     action: (e) => setTextareaStyle('letterSpacing', e.target.value + 'pt')
@@ -45,18 +39,18 @@ const EVENT_MAP = {
   },
   '#top-padding': {
     on: 'change',
-    action: (e) => {
-      document.querySelector('.page-a .paper-content').style.paddingTop =
-        e.target.value + 'px';
+    action: (e) => { 
+      document.querySelector('.page-a .paper-content').style.paddingTop = e.target.value + 'px';
     }
   },
-  '#ink-color': {
+  '#default-ink-color': {
     on: 'change',
     action: (e) => {
       document.body.style.setProperty('--ink-color', e.target.value);
       setInkColor(e.target.value);
     }
   },
+  
   '#paper-margin-toggle': {
     on: 'change',
     action: () => {
@@ -77,19 +71,7 @@ const EVENT_MAP = {
       }
     }
   },
-  /*
-  '#draw-diagram-button': {
-    on: 'click',
-    action: () => {
-        toggleDrawCanvas();
-    }
-  },
-  '.draw-container .close-button': {
-    on: 'click',
-    action: () => {
-      toggleDrawCanvas();
-    }
-  },*/
+
   '#download-as-pdf-button': {
     on: 'click',
     action: () => {
