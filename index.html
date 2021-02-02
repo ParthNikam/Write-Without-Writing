@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head>       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125454191-4"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125454191-4"></script>
+        <script src="https://kit.fontawesome.com/7ca7bf12b1.js" crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
@@ -13,11 +14,10 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
-        <title>Write Without Writing</title>
+        <title>new 5</title>
         <link rel="icon" type="image/png" href="images/icon.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao&display=swap" />
-        <link rel="stylesheet" href="./css/ribbon.css" />
-        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/newribbon.css" />
         <link rel="stylesheet" href="./css/features.css" />
     </head>
     <body>
@@ -26,11 +26,26 @@
         <div class="ribbon-menu">
             <div class="ribbon-section">
                 <div class="tooltip">
+                    <span class="tooltiptext">Text Style</span>
+                    <select onchange="execCommandWithArg('formatBlock', this.value);" style="width:81px;">
+                        <option value="H1">H1</option>
+                        <option value="H2">H2</option>
+                        <option value="H3">H3</option>
+                        <option value="H4">H4</option>
+                        <option value="H5">H5</option>
+                        <option value="H6">H6</option>
+                    </select>
+                </div>
+                <div class="tooltip">
                     <span class="tooltiptext">Font Style</span>
                     <select id="handwriting-font" onchange="ChangeFont(this);">
-                        <option value="QEBEV" selected>QEBEV</option>
+                        <option value="Amano">Amano</option>
+                        <option value="Angelina">Angelina</option>
+                        <option value="Architex">Architex</option>
+                        <option value="QEBEV">BEV</option>
                         <option value="QEBradenHill">BradenHill</option>
                         <option value="QECarolineMutiboko">CarolineMutiboko</option>
+                        <option value="cassetteTapes">Cassete Tapes</option>
                         <option value="QEDaveMergens">DaveMergens</option>
                         <option value="QEDavidReid">DavidReid</option>
                         <option value="QEDavidReidCAP">DavidReidCAP</option>
@@ -42,6 +57,15 @@
                         <option value="QEHerbertCooper">HerbertCooper</option>
                         <option value="QEJeffDungan">JeffDungan</option>
                         <option value="Hindi">Hindi</option>
+                        <option value="Hindi2">Hindi 2</option>
+                        <option value="Hindi3">Hindi 3</option>
+                        <option value="MissNeally">MissNeally</option>
+                        <option value="Mutlu">Mutlu</option>
+                        <option value="GoCome">GoCome</option>
+                        <option value="Geofany">Geofany</option>
+                        <option value="Monika_Italic">Monica Italic</option>
+                        <option value="Thin_Pencil_Handwriting">Thin Pencil</option>
+                        <option value="Up_in_the_Air">Up in the air</option>
                         <option value="QEJER">JER</option>
                         <option value="QEJohnCaplin">JohnCaplin</option>
                         <option value="QEJohnWilliams">JohnWilliams</option>
@@ -64,53 +88,78 @@
                 </div>
                 <div class="tooltip">
                     <span class="tooltiptext">Font Size</span>
-                    <input class="input" id="font-size" min="0" step="0.5" value="10" style="width:50px;" type="number" onchange="ChangeFontSize(this);"/>
+                    <select onchange="execCommandWithArg('fontSize', this.value);" style="width:64px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
                 </div>
                 <div class="tooltip">
                     <span class="tooltiptext">Ink Color</span>
-                    <select id="ink-color" style="width:67px;">
+                    <select id="default-ink-color" style="width:64px;">
                         <option default value="#000f55">Blue</option>
                         <option value="black">Black</option>
                         <option value="#ba3807">Red</option>
                     </select>
                 </div>
-
-                <button class="button" onclick="document.execCommand('bold',false,null);"><strong style="font-family: bembo;">B</strong></button>
-                <button class="button" onclick="document.execCommand('italic',false,null);"><strong style="font-family: bembo;"><i>I</i></strong></button>
-                <button class="button" onclick="document.execCommand('underline',false,null);"><strong style="font-family: bembo; text-decoration: underline;">U</strong></button>
-                <!--<button class="button" onclick="document.execCommand('line-through',false,null);"><strong style="font-family: bembo; text-decoration: line-through;">abc</strong></button>
-                <button class="button"><strong style="font-family: bembo; font-size: 11px;">X<sub>2</sub></strong></button>
-                <button class="button"><strong style="font-family: bembo; font-size: 11px;">X<sup>2</sup></strong></button>
-                <button class="button"><strong style="font-family: bembo; border-bottom: 2px solid rgb(209, 209, 209);">A</strong></button>-->
-                <div class="descript">Font</div>
+                <br>
+                <button class="button" onclick="execCmd('bold');">                <i class="fa fa-bold"></i></button>
+                <button class="button" onclick="execCmd('italic');">              <i class="fa fa-italic"></i></button>
+                <button class="button" onclick="execCmd('underline');">           <i class="fa fa-underline"></i></button>
+                <button class="button" onclick="execCmd('strikeThrough');">       <i class="fa fa-strikethrough"></i></button>
+                <button class="button" onclick="execCmd('subscript');">           <i class="fa fa-subscript"></i></button>
+                <button class="button" onclick="execCmd('superscript');">         <i class="fa fa-superscript"></i></button>
+                
+                <input type="color" id="custom-ink-color" style="display:none" onchange="changeColor(this.value);"><!--<button class="button"><i class="fas fa-tint"></i></button>-->
+                <button class="button" id="inkcolor" style="border-bottom: 3px solid;" ><i class="fas fa-tint"></i></button>
+                <input type="color" id="bg-color" style="display:none;" onchange="changeBgcolor(this.value);"><!--<button class="button"><i class="fas fa-highlighter"></i>></button>-->
+                <button class="button" style="border-bottom: 3px solid;" id="highlight"><i class="fas fa-highlighter"></i></button>
+                <button class="button" onclick="execCmd('removeFormat')"><i class="fas fa-remove-format"></i></button>
             </div>
             <div class="separator"></div>
             <div class="ribbon-section">
                 <div class="tooltip">
                     <span class="tooltiptext">Vertical Spacing</span>
-                    <input id="top-padding" min="0" value="5" type="number" style="width: 50px;"/>
+                    <input id="top-padding" min="0" value="5" type="number" style="width: 83px;"/>
                 </div>
                 <div class="tooltip">
                     <span class="tooltiptext">Word Spacing</span>
-                    <input id="word-spacing" min="0" value="0" type="number" style="width: 50px;"/>
+                    <input id="word-spacing" min="0" value="0" type="number" style="width: 83px;"/>
                 </div>
                 <div class="tooltip">
                     <span class="tooltiptext">Letter Spacing</span>
-                    <input id="letter-spacing" value="0" type="number" style="width:50px;"/>
+                    <input id="letter-spacing" value="0" type="number" style="width:83px;"/>
                 </div>
-        
+                
+                <br>
+
+                <button class="button" onclick="execCmd('justifyLeft');">         <i class="fa fa-align-left"></i></button>
+                <button class="button" onclick="execCmd('justifyCenter');">       <i class="fa fa-align-center"></i></button>
+                <button class="button" onclick="execCmd('justifyRight');">        <i class="fa fa-align-right"></i></button>
+                <button class="button" onclick="execCmd('justifyFull');">         <i class="fa fa-align-justify"></i></button>
+                <button class="button" onclick="execCmd('indent');">              <i class="fa fa-indent"></i></button>
+                <button class="button" onclick="execCmd('outdent');">             <i class="fa fa-dedent"></i></button>
+                <button class="button" onclick="execCmd('insertUnorderedList');"> <i class="fa fa-list-ul"></i></button>
+                <button class="button" onclick="execCmd('insertOrderedList');">   <i class="fa fa-list-ol"></i></button>
+                <button class="button" onclick="execCmd('insertParagraph');">     <i class="fa fa-paragraph"></i></button>
+            </div>
+            <div class="separator"></div>
+            <div class="ribbon-section" style="position: relative; bottom:25px;">
                 <div class="tooltip">
                     <span class="tooltiptext">Page Effects</span>
-                    <select id="page-effects" style="width:100px;">
+                    <select id="page-effects" style="width:108px;">
                         <option default value="shadows">Shadows</option>
                         <option value="scanner">Scanner</option>
                         <option value="no-effect">No Effect</option>
                     </select>
                 </div>
-        
                 <div class="tooltip">
                     <span class="tooltiptext">Page Resolution</span>
-                        <select id="resolution" style="width:100px;">
+                        <select id="resolution" style="width:108px;">
                         <option value="0.8">Very Low</option>
                         <option value="1">Low</option>
                         <option selected value="2">Normal</option>
@@ -120,30 +169,22 @@
                 </div>
                 
                 <label style="margin-left:10px;" for="paper-margin-toggle">Paper Margin:
-                <span aria-label="paper margin status" class="status">on</span>
+                    <span aria-label="paper margin status" class="status">on</span>
+                    </label>
+                    <label class="switch-toggle outer" style="top:20px;">
+                    <input aria-checked="true" checked aria-label="Paper Margin Button" id="paper-margin-toggle" style="display: inline-block; " type="checkbox" />
+                    <div></div>
+                    </label>
+            
+                    <label style="margin-left: 10px;" for="paper-line-toggle">Paper Lines:
+                    <span aria-label="paper line status" class="status">on</span>
+                    </label>
+                    <label class="switch-toggle outer" style="top:20px;">
+                    <input aria-checked="true" checked aria-label="Paper Line Button" id="paper-line-toggle" type="checkbox" style="display: inline-block; "/>
+                    <div></div>
                 </label>
-                <label class="switch-toggle outer" style="top:20px;">
-                <input aria-checked="true" checked aria-label="Paper Margin Button" id="paper-margin-toggle" style="display: inline-block;" type="checkbox" />                    
-                <div></div>
-                </label>
-        
-                <label style="margin-left: 10px;" for="paper-line-toggle">Paper Lines:
-                <span aria-label="paper line status" class="status">on</span>
-                </label>
-                <label class="switch-toggle outer" style="top:20px;">
-                <input aria-checked="true" checked aria-label="Paper Line Button" id="paper-line-toggle" type="checkbox" />
-                <div></div>
-                </label>
-
-                <div class="descript">Page</div>
-
             </div>
             <div class="separator"></div>
-
-            <div class="ribbon-section">
-                <a target="blank" href="https://github.com/ParthNikam/Write-Without-Writing"><strong>help make this site better!</strong></a>
-            </div>
-            
         </div>
 
         <svg class="arrow">
@@ -151,71 +192,94 @@
             <path class="a2" d="M0 20 L30 42 L60 20"></path>
             <path class="a3" d="M0 40 L30 62 L60 40"></path>
         </svg>
-       
+
         <main>
-        <section class="generate-image-section" style="margin-left: 650px;">
-            <form id="generate-image-form">
-                <!-- Generate Image Section -->
-                <div class="display-flex output-grid responsive-flex">       
-                <div >        
-                    <div class="page-container">
-                    <div class="page-a margined lines">
-                      <div contenteditable="true" class="top-margin"></div>
-                      <div class="display-flex left-margin-and-content">
-                        <div contenteditable="true" class="left-margin"></div>
-                        <div class="paper-content" id="note" contenteditable="true">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
-                          in felis viverra efficitur. Integer id laoreet arcu.
-                          Mauris turpis nibh, scelerisque sed tristique non,
-                          hendrerit in erat. Duis interdum nisl risus, ac ultrices
-                          ipsum auctor at. Aliquam faucibus iaculis metus sit amet
-                          tincidunt. Vestibulum cursus urna vel nunc imperdiet
-                          suscipit. Ut eu augue egestas, porta orci lobortis,
-                          pharetra orci. Morbi eu tellus quis nisi tempor accumsan
-                          nec eu urna. empor, ullamcorper tortor. Mauris quis
-                          fermentum augue. Phasellus ac nisl hendrerit, fringilla
-                          enim aliquam, placerat odio. Ut tortor nisi, pellentesque
-                          sed nisi at, hendrerit imperdiet turpis. Proin interdum
-                          porttitor metus at hendrerit. Proin ipsum nisl, lacinia
-                          vitae purus ullamcorper, maximus convallis sem. Sed nec
-                          lacinia lorem. Duis arcu metus, cursus non odio quis,
-                          tincidunt tempor augue. Donec eget vestibulum risus.
-                          Nullam blandit quis est vitae feugiat.
+            <section class="generate-image-section" style="margin-left: 40%;">
+                <form id="generate-image-form">
+                    <!-- Generate Image Section -->
+                    <div class="display-flex output-grid responsive-flex">       
+                    <div >        
+                        <div class="page-container">
+                        <div class="page-a margined lines">
+                          <div contenteditable="true" class="top-margin"></div>
+                          <div class="display-flex left-margin-and-content">
+                            <div contenteditable="true" class="left-margin"></div>
+                            <div class="paper-content" id="note" contenteditable="true">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                              Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
+                              in felis viverra efficitur. Integer id laoreet arcu.
+                              Mauris turpis nibh, scelerisque sed tristique non,
+                              hendrerit in erat. Duis interdum nisl risus, ac ultrices
+                              ipsum auctor at. Aliquam faucibus iaculis metus sit amet
+                              tincidunt. Vestibulum cursus urna vel nunc imperdiet
+                              suscipit. Ut eu augue egestas, porta orci lobortis,
+                              pharetra orci. Morbi eu tellus quis nisi tempor accumsan
+                              nec eu urna. empor, ullamcorper tortor. Mauris quis
+                              fermentum augue. Phasellus ac nisl hendrerit, fringilla
+                              enim aliquam, placerat odio. Ut tortor nisi, pellentesque
+                              sed nisi at, hendrerit imperdiet turpis. Proin interdum
+                              porttitor metus at hendrerit. Proin ipsum nisl, lacinia
+                              vitae purus ullamcorper, maximus convallis sem. Sed nec
+                              lacinia lorem. Duis arcu metus, cursus non odio quis,
+                              tincidunt tempor augue. Donec eget vestibulum risus.
+                              Nullam blandit quis est vitae feugiat.
+                            </div>
+                          </div>
+                          <div class="overlay"></div>
                         </div>
-                      </div>
-                      <div class="overlay"></div>
-                    </div>
-                    </div>
-
-                    <div class="customization-col">
-                        <div class="category-grid">
-                            <div style="padding: 30px; margin-left: 50px;">
-                                <button type="submit" data-testid="generate-image-button" class="generate-image-button">
-                                Generate Image
-                                </button>
-                            </div> 
+                        </div>
+    
+                        <div class="customization-col">
+                            <div class="category-grid">
+                                <div style="padding: 30px; margin-left: 50px;">
+                                    <button type="submit" data-testid="generate-image-button" class="generate-image-button">
+                                    Generate Image
+                                    </button>
+                                </div> 
+                            </div>
                         </div>
                     </div>
+                    </div>
+                </form>
+            </section>
+    
+            <section>
+                <h2 id="output-header" style="margin-left:200px">Output</h2>
+                <div id="output" class="output" style="text-align: center; margin-left: 200px;">Images: None
                 </div>
+                <div style="text-align: center; padding: 30px;">
+                    <button class="imp-button" id="download-as-pdf-button">Download Images as PDF</button>
+                    <button class="delete-button" id="delete-all-button">Clear Images</button>
                 </div>
-            </form>
-        </section>
+            </section>
+        </main>
 
-        <section>
-            <h2 id="output-header" style="margin-left:200px">Output</h2>
-            <div id="output" class="output" style="text-align: center; margin-left: 200px;">Images: None
-            </div>
-            <div style="text-align: center; padding: 30px;">
-                <button class="imp-button" id="download-as-pdf-button">Download Images as PDF</button>
-                <button class="delete-button" id="delete-all-button">Clear Images</button>
-            </div>
-        </section>
-        
         <script src="./js/vendors/html2canvas.min.js" crossorigin="anonymous"></script>
-        <script type="module" src="js/app.mjs"></script>
+        <script type="module" src="js/newapp.js"></script>
         <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
         <script>
+            var changeColor = function(val){
+                document.execCommand('foreColor', false, val);
+                document.getElementById("inkcolor").style.borderBottomColor = val;
+            }
+
+            $("#inkcolor").on('click', function(){ $("#custom-ink-color").click();})
+
+            var changeBgcolor = function(val){ 
+                document.execCommand('hiliteColor', false, val);
+                document.getElementById("highlight").style.borderBottomColor = val;
+            }
+
+            $("#highlight").on('click', function(){ $("#bg-color").click();})
+
+            function execCmd(command) {
+				document.execCommand(command, false, null);
+			}
+
+			function execCommandWithArg(command, arg) {
+				document.execCommand(command, false, arg);
+			}            
+
             var getColor = function (input) {
                 document.getElementById("colorOutput").innerHTML = input.value;
                 document.getElementById("note").style.color = input.value;
@@ -247,7 +311,7 @@
                     }`;
                 parent.appendChild(newFontStyleSheet);
             }    
+
         </script>
-        <script src="script.js"></script>
     </body>
 </html>
