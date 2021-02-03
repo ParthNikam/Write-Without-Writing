@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>       
+    <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125454191-4"></script>
         <script src="https://kit.fontawesome.com/7ca7bf12b1.js" crossorigin="anonymous"></script>
@@ -22,6 +22,8 @@
     </head>
     <body>
         <h1 style="text-align: center; font-family: Homemade Apple;margin:10px;">Write Without Writing</h1>
+
+    
 
         <div class="ribbon-menu">
             <div class="ribbon-section">
@@ -187,72 +189,72 @@
             <div class="separator"></div>
         </div>
 
-        <svg class="arrow">
-            <path class="a1" d="M0 0 L30 22 L60 0"></path>
-            <path class="a2" d="M0 20 L30 42 L60 20"></path>
-            <path class="a3" d="M0 40 L30 62 L60 40"></path>
-        </svg>
-
-        <main>
-            <section class="generate-image-section" style="margin-left: 40%;">
-                <form id="generate-image-form">
-                    <!-- Generate Image Section -->
-                    <div class="display-flex output-grid responsive-flex">       
-                    <div >        
-                        <div class="page-container">
-                        <div class="page-a margined lines">
-                          <div contenteditable="true" class="top-margin"></div>
-                          <div class="display-flex left-margin-and-content">
-                            <div contenteditable="true" class="left-margin"></div>
-                            <div class="paper-content" id="note" contenteditable="true">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
-                              in felis viverra efficitur. Integer id laoreet arcu.
-                              Mauris turpis nibh, scelerisque sed tristique non,
-                              hendrerit in erat. Duis interdum nisl risus, ac ultrices
-                              ipsum auctor at. Aliquam faucibus iaculis metus sit amet
-                              tincidunt. Vestibulum cursus urna vel nunc imperdiet
-                              suscipit. Ut eu augue egestas, porta orci lobortis,
-                              pharetra orci. Morbi eu tellus quis nisi tempor accumsan
-                              nec eu urna. empor, ullamcorper tortor. Mauris quis
-                              fermentum augue. Phasellus ac nisl hendrerit, fringilla
-                              enim aliquam, placerat odio. Ut tortor nisi, pellentesque
-                              sed nisi at, hendrerit imperdiet turpis. Proin interdum
-                              porttitor metus at hendrerit. Proin ipsum nisl, lacinia
-                              vitae purus ullamcorper, maximus convallis sem. Sed nec
-                              lacinia lorem. Duis arcu metus, cursus non odio quis,
-                              tincidunt tempor augue. Donec eget vestibulum risus.
-                              Nullam blandit quis est vitae feugiat.
-                            </div>
-                          </div>
-                          <div class="overlay"></div>
-                        </div>
-                        </div>
-    
-                        <div class="customization-col">
-                            <div class="category-grid">
-                                <div style="padding: 30px; margin-left: 50px;">
-                                    <button type="submit" data-testid="generate-image-button" class="generate-image-button">
-                                    Generate Image
-                                    </button>
-                                </div> 
+        <main>           
+            <div class="col-40">
+              <div class="block" style="margin-left: 50px; margin-right: 20px;">
+                <section class="generate-image-section" >
+                    <form id="generate-image-form">
+                        <!-- Generate Image Section -->
+                        <div class="display-flex output-grid responsive-flex">       
+                            <div>
+                                <div class="flex-1 page-container">
+                                    <div class="page-a margined lines">
+                                        <div contenteditable="true" class="top-margin"></div>
+                                            <div class="display-flex left-margin-and-content">
+                                                <div contenteditable="true" class="left-margin"></div>
+                                                    <div class="paper-content" id="note" contenteditable="true">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
+                                                    in felis viverra efficitur. Integer id laoreet arcu.
+                                                    Mauris turpis nibh, scelerisque sed tristique non,
+                                                    hendrerit in erat. Duis interdum nisl risus, ac ultrices
+                                                    ipsum auctor at. Aliquam faucibus iaculis metus sit amet
+                                                    tincidunt. Vestibulum cursus urna vel nunc imperdiet
+                                                    suscipit. Ut eu augue egestas, porta orci lobortis,
+                                                    pharetra orci. Morbi eu tellus quis nisi tempor accumsan
+                                                    nec eu urna. empor, ullamcorper tortor. Mauris quis
+                                                    fermentum augue. Phasellus ac nisl hendrerit, fringilla
+                                                    enim aliquam, placerat odio. Ut tortor nisi, pellentesque
+                                                    sed nisi at, hendrerit imperdiet turpis. Proin interdum
+                                                    porttitor metus at hendrerit. Proin ipsum nisl, lacinia
+                                                    vitae purus ullamcorper, maximus convallis sem. Sed nec
+                                                    lacinia lorem. Duis arcu metus, cursus non odio quis,
+                                                    tincidunt tempor augue. Donec eget vestibulum risus.
+                                                    Nullam blandit quis est vitae feugiat.
+                                                </div>
+                                            </div>
+                                        <div class="overlay"></div>
+                                    </div><br/>
+                                </div>
+                                <div class="customization-col">
+                                    <div class="category-grid">
+                                        <div style="padding: 10px; margin-left: 150px;position: relative; left: 30px;">
+                                            <button type="submit" data-testid="generate-image-button" class="generate-image-button">
+                                            Generate Image
+                                            </button>
+                                        </div> 
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </form>
+                </section>
+              </div>
+            </div>
+            <div class="col-60">
+              <div class="block" style="margin-right: 50px; margin-left: 20px;">
+                <section>
+                    <h2 id="output-header" style="margin-left:10px">Output</h2>
+                    <div id="output" class="output" style="text-align: center; margin-left: 10px;">Images: None</div>
+                    <div style="text-align: center; position: relative; left: 100px;top: 50px;">
+                        <button class="imp-button" id="download-as-pdf-button">Download Images as PDF</button>
+                        <button class="delete-button" id="delete-all-button">Clear Images</button>
                     </div>
-                    </div>
-                </form>
-            </section>
-    
-            <section>
-                <h2 id="output-header" style="margin-left:200px">Output</h2>
-                <div id="output" class="output" style="text-align: center; margin-left: 200px;">Images: None
-                </div>
-                <div style="text-align: center; padding: 30px;">
-                    <button class="imp-button" id="download-as-pdf-button">Download Images as PDF</button>
-                    <button class="delete-button" id="delete-all-button">Clear Images</button>
-                </div>
-            </section>
+                </section>
+              </div>
+            </div>
         </main>
+
 
         <script src="./js/vendors/html2canvas.min.js" crossorigin="anonymous"></script>
         <script type="module" src="js/app.js"></script>
