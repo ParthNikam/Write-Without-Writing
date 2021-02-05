@@ -1,7 +1,7 @@
 {
-  "name": "text-to-handwriting",
+  "name": "Write Without Writing",
   "version": "1.0.0-rc.1",
-  "description": "Hey everyone! text-to-handwriting is a tool that lets you generate image that looks like handwriting from text.",
+  "description": "This app is made for saving a lot of trees and people's time. Use this app to finish notes and save Trees",
   "main": "js/app.js",
   "directories": {
     "lib": "lib"
@@ -16,15 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saurabhdaware/text-to-handwriting.git"
+    "url": "https://github.com/ParthNikam/Write-Without-Writing.git"
   },
   "keywords": [],
-  "author": "Saurabh Daware <saurabhdaware99@gmail.com> (https://saurabhdaware.in/)",
-  "license": "MIT",
+  "author": "Parth Nikam",
   "bugs": {
-    "url": "https://github.com/saurabhdaware/text-to-handwriting/issues"
+    "url": "https://github.com/ParthNikam/Write-Without-Writing/issues"
   },
-  "homepage": "https://github.com/saurabhdaware/text-to-handwriting#readme",
+  "homepage": "https://github.com/ParthNikam/Write-Without-Writing",
   "devDependencies": {
     "cypress": "^4.4.1",
     "eslint": "^7.0.0",
