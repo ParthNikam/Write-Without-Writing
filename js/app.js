@@ -46,12 +46,7 @@ const EVENT_MAP = {
   '#font_Size': {
     on: 'change',
     action: (e) => {
-      if (e.target.value > 30) {
-        alert("Font-size can not be over 30");
-      } else {
         setTextareaStyle('fontSize', e.target.value + 'pt');
-        e.preventDefault();
-      }
     }
   },
   '#default-ink-color': {
