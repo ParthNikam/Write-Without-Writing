@@ -29,10 +29,10 @@ function createPDF(imgs) {
     doc.addImage(
       imgs[i],
       'png',
-      10,
-      10,
-      width-20,
-      height-20,
+      0,
+      0,
+      width,
+      height+4,
       'image-' + i
     );
     if (i != imgs.length - 1) {
