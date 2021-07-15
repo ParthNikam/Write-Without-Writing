@@ -174,6 +174,57 @@ body {
     display: block;
     overflow-y: auto;
   }
+
+  .square-box{
+    position: relative;
+    border: 1px solid rgba(255, 0, 0, .4);
+    width: 30%;
+    height: 30px;
+    font-size:8px;
+    color: rgba(255, 0, 0, .4);
+    line-height:5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+  }
+
+   .youva-logo{
+      position: relative;
+      font-family: "MV Boli";
+      font-weight: bold;
+      font-size:10px;
+      color: rgba(255, 0, 0, .4);
+      text-align: center; 
+      top:10px;
+      padding-left: 70px;
+      line-height: 5px;
+      
+    }
+
+    .square-date{
+      text-align: left;
+      position: relative;                
+      font-family: "calibri";
+      margin-right:45px;
+      padding-left: 5px; 
+      padding-bottom: 6px;
+      padding-top: 3px;
+      bottom: 6px;
+      border-right: 1px solid rgba(255, 0,0,.4);
+    }
+
+    .square-page{
+      position: relative;
+      text-align: left;
+      font-family: "calibri";
+      margin-right:45px;
+      padding-left: 5px; 
+      padding-bottom: 5px;
+      padding-top: 5px;
+      bottom:6px;
+      border-bottom: 1px solid rgba(255, 0,0,.4);
+      border-right: 1px solid rgba(255, 0,0,.4);
+    }
   
   .margined .left-margin {
     width: 50px;
