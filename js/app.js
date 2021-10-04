@@ -1,4 +1,4 @@
-import {formatText} from './utils/helpers.mjs';
+import {formatText, addPaperFromFile} from './utils/helpers.mjs';
 import {
   generateImages,
   downloadAsPDF,
