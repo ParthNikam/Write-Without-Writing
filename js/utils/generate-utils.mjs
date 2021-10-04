@@ -3,7 +3,6 @@ const paperContentEl = document.querySelector('.page-a .paper-content');
 const overlayEl = document.querySelector('.overlay');
 
 
-
 function applyPaperStyles() {
   pageEl.style.border = 'none';
   pageEl.style.overflowY = 'hidden';
@@ -38,9 +37,6 @@ function removePaperStyles() {
     overlayEl.classList.remove(document.querySelector('#page-effects').value);
   }
 
-  if (isFontErrory()) {
-    paperContentEl.style.paddingTop = `${paperContentPadding}px`;
-  }
 }
 
 function renderOutput(outputImages) {
