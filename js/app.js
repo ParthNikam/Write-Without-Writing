@@ -4,7 +4,6 @@ import {
   downloadAsPDF,
   deleteAll
 } from './generate-images.mjs';
-//import { setInkColor, toggleDrawCanvas } from './utils/draw.mjs';
 
 const pageEl = document.querySelector('.page-a');
 
@@ -28,7 +27,6 @@ const EVENT_MAP = {
     }
   },
  
-  
   '#letter-spacing': {
     on: 'change',
     action: (e) => setTextareaStyle('letterSpacing', e.target.value + 'pt')
@@ -99,12 +97,14 @@ const EVENT_MAP = {
     on: 'paste',
     action: formatText
   },
+
   '#paper-file': {
     on: 'change',
     action: (e) => addPaperFromFile(e.target.files[0])
   }
-  
 };
+
+
 
 for (const eventSelector in EVENT_MAP) {
   document
