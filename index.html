@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125454191-4"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125454191-4"></script>
         <script src="https://kit.fontawesome.com/7ca7bf12b1.js" crossorigin="anonymous"></script>
@@ -105,6 +106,8 @@
                         <option value="#ba3807">Red</option>
                     </select>
                 </div>
+                
+
                 <br>
                 <button class="button" onclick="execCmd('bold');">                <i class="fa fa-bold"></i></button>
                 <button class="button" onclick="execCmd('italic');">              <i class="fa fa-italic"></i></button>
@@ -187,9 +190,20 @@
                     <input aria-checked="true" checked aria-label="Paper Line Button" id="paper-line-toggle" type="checkbox" style="display: inline-block; "/>
                     <div></div>
                 </label>
-            </div>
-            <div class="separator"></div>
-	<a target="blank" href="https://github.com/ParthNikam/Write-Without-Writing" style="color:lightgrey;position:relative; bottom:20px;left:10px;">help make this site better!</a>
+                </div>
+                <div class="separator"></div>
+                <div class="ribbon-section" style="position: relative; bottom:25px;">
+                    <div calss="tooltip">
+                        <div class="upload-paper-container">
+                            <label for="paper-file">
+                                Paper Image
+                            </label>
+                            <input accept=".jpg, .jpeg, .png" type="file" id="paper-file"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+	            <a target="blank" href="https://github.com/ParthNikam/Write-Without-Writing" style="color:lightgrey;position:relative; bottom:20px;left:10px;">help make this site better!</a>
 
         </div>
 
@@ -311,8 +325,8 @@
             function setFontTo(fontName) {
                 const styleName = 'note';
                 if (document.getElementById("new_font")) {
-                newFontStyleSheet = document.getElementById("new_font");
-                document.getElementById("note").removeChild(newFontStyleSheet);
+                    newFontStyleSheet = document.getElementById("new_font");
+                    document.getElementById("note").removeChild(newFontStyleSheet);
                 }
                 var parent = document.getElementById(styleName);
                 var newFontStyleSheet = document.createElement("style");
