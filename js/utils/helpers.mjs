@@ -1,24 +1,7 @@
 const pageEl = document.querySelector('.page-a');
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-function addFontFromFile(fileObj) {
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const newFont = new FontFace('temp-font', e.target.result);
-    newFont.load().then((loadedFace) => {
-      document.fonts.add(loadedFace);
-      pageEl.style.fontFamily = 'temp-font';
-    });
-  };
-  reader.readAsArrayBuffer(fileObj);
-}
 
-/**
- * @method createPDF
- * @param imgs array of images (in base64)
- * @description
- * Creates PDF from list of given images
- */
 function createPDF(imgs) {
   // eslint-disable-next-line new-cap
   const doc = new jsPDF('p', 'pt', 'a4');
