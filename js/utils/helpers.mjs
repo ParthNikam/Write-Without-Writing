@@ -39,3 +39,4 @@ function addPaperFromFile(file) {
 }
 
 export { isMobile, createPDF, formatText, addPaperFromFile };
+
