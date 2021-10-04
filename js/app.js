@@ -99,7 +99,10 @@ const EVENT_MAP = {
     on: 'paste',
     action: formatText
   },
-  
+  '#paper-file': {
+    on: 'change',
+    action: (e) => addPaperFromFile(e.target.files[0])
+  }
   
 };
 
