@@ -2,13 +2,7 @@ const pageEl = document.querySelector('.page-a');
 const paperContentEl = document.querySelector('.page-a .paper-content');
 const overlayEl = document.querySelector('.overlay');
 
-let paperContentPadding;
 
-function isFontErrory() {
-  // SOme fonts have padding top errors, this functions tells you if the current font has that;
-  const currentHandwritingFont = document.body.style.getPropertyValue('--handwriting-font');
-  return (currentHandwritingFont === '' || currentHandwritingFont.includes('Homemade Apple'));
-}
 
 function applyPaperStyles() {
   pageEl.style.border = 'none';
@@ -32,13 +26,6 @@ function applyPaperStyles() {
       Math.random() * 360
     }deg, #0008, #0000)`;
   }
-
-  // if (isFontErrory() && document.querySelector('#font-file').files.length < 1) {
-  //   paperContentPadding =
-  //     paperContentEl.style.paddingTop.replace(/px/g, '') || 5;
-  //   const newPadding = Number(paperContentPadding) - 5;
-  //   paperContentEl.style.paddingTop = `${newPadding}px`;
-  // }
 }
 
 function removePaperStyles() {
